@@ -1,7 +1,7 @@
 all: writer
 
 writer: writer.c
-	$(CROSS_COMPILE)gcc -g -Wall -o writer writer.c
+	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	rm -f *.o writer
+	rm -f writer
